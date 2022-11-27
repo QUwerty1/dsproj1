@@ -1,0 +1,10 @@
+QUwerty: Botyra 
+Botyra: Hi! <@358960974679769110> 
+QUwerty: something 
+QUwerty: I hope logger is still working 
+QUwerty:  
+QUwerty: >ping 
+QUwerty: Botyra 
+Botyra: Hi! <@358960974679769110> 
+QUwerty: >ping 
+QUwerty: >ping 
