@@ -1,8 +1,5 @@
 from config import *
 
-intents = discord.Intents.default()
-intents.message_content = True
-
 bot = commands.Bot(command_prefix=Settings.prefix, intents=intents)
 
 vc = ''
