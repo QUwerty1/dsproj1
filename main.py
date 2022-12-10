@@ -2,6 +2,7 @@ import discord
 from config import Settings
 from discord.ext import commands
 from youtube_dl import YoutubeDL
+from Logger import Logger
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -64,17 +65,13 @@ async def connect(ctx):
 async def on_ready():
     print('We have been logged in as {0.user}'.format(bot))
 
+logger = Logger()
 
 @bot.event
 async def on_message(message):
     await bot.process_commands(message)
-    with open('logs/' + message.channel.name + '.txt', mode='a') as f:
-        f.write(f'{message.author.name}: {message.content} \n')
-    print(f'{message.author.name}: {message.content}')
-    if message.author == bot.user:
-        return
-    if message.content.startswith('Botyra'):
-        await message.channel.send(f'Hi! {message.author.mention}')
+    logger.log(message)
+    print(message.content)
 
 bot.run(Settings.token)
 
