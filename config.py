@@ -1,7 +1,12 @@
 import discord
+import sqlalchemy
 from discord.ext import commands
 from youtube_dl import YoutubeDL
 from Logger import Logger
+
+
+class SQLs:
+    dialect = 'mysql'
 
 
 class Settings:
